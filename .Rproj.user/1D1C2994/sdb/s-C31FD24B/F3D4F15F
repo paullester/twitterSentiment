@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1485921527152.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F3D4F15F",
+    "lastKnownWriteTime" : 8070450532524420352,
+    "last_content_update" : 1485921527152,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "466FBEB1",
+        "caption" : "hrc.df.trim",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=hrc.df.trim&cache_key=466FBEB1",
+        "displayedObservations" : 2082,
+        "environment" : "",
+        "object" : "hrc.df.trim",
+        "preview" : 0,
+        "totalObservations" : 2082,
+        "variables" : 4
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

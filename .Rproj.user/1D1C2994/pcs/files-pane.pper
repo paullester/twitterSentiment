@@ -1,0 +1,9 @@
+{
+    "path" : "~/datascience/sentiment",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
