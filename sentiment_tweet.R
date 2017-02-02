@@ -118,7 +118,7 @@ tweets.df$id<-seq.int(nrow(tweets.df))
 ##Clean text data
 ##########################
 
-#remove tweets startign with " -> indication of a manual retweet
+#remove tweets startign with " -> indication of a manual retweet, which Trump does once in a while
 colnames(tweets.df)[1] <- "text"
 reg <- "([^A-Za-z\\d#@']|'(?![A-Za-z\\d#@]))"
 tweet.words <- tweets.df %>%
@@ -128,7 +128,7 @@ tweet.words <- tweets.df %>%
   filter(!word %in% stop_words$word,
          str_detect(word, "[a-z]"))
 
-
+#count most frequent words by candidate, take log ratio differentces
 djt_hrc_comparison_ratio <- tweet.words %>%
   count(word, source) %>%
   filter(sum(n) >= 5) %>%
@@ -137,6 +137,7 @@ djt_hrc_comparison_ratio <- tweet.words %>%
   mutate_each(funs((. + 1) / sum(. + 1)), -word) %>%
   mutate(logratio = log2(Trump / Hillary)) %>%
   arrange(desc(logratio))
+
 
 djt_hrc_comparison_ratio %>%
   group_by(logratio > 0) %>%
